@@ -1,23 +1,34 @@
-[http://users.ece.gatech.edu/~justin/l1magic/, $\ell_1-\mathrm{MAGIC}$] 
-is a suite of software for  "solving the convex optimization programs 
-central to compressive sampling". A single function, 
-<a class="pz_show_code" codenodes="2">l1eq_pd.m</a>, is reproduced here.
+<div class="text">
 
-A <a class="pz_show_code" codenodes="3">stand-in for Matlab's linsolve.m 
-function</a>  allows l1eq_pd.m to run in Octave.
+  <h2>$\ell_1-\mathrm{MAGIC}$</h2>
 
-As an example, consider solving $Ax=b$, where
+  [http://users.ece.gatech.edu/~justin/l1magic/,
+  $\ell_1-\mathrm{MAGIC}$] is a suite of Matlab software for "solving
+  the convex optimization programs central to compressive
+  sampling". Here we consider ports to other languages.
 
-$$A=
-\begin{bmatrix}
-1&-1&1\\1&2&4
-\end{bmatrix},
-\,\,\,\,\,\,\,\,\,\,\,\,
-b=\begin{bmatrix}1\\4\end{bmatrix}.
-$$
+  Presently only a stand-in for Matlab's linsolve.m function is
+  provided to allow l1eq_pd.m to run in Octave.
 
-Obviously we can't invert $A$, but if $x$ is known to be 1-sparse, then 
-$x=[0~0~1]^T$ is a [/?id=b007z,unique solution]. In octave:
+  As a toy problem, consider solving $Ax=b$, where
 
-<!--puzlet_end--> (1)
+  $$
+  A=
+  \begin{bmatrix}
+  1&-1&1\\1&2&4
+  \end{bmatrix},
+  \,\,\,\,\,\,\,\,\,\,\,\,
+  b=\begin{bmatrix}1\\4\end{bmatrix}.
+  $$
 
+  Obviously we can't invert $A$, but if $x$ is known to be 1-sparse,
+  then $x=[0~0~1]^T$ is a [/?id=b007z,unique solution]. In octave:
+
+  <div data-file="./m/l1eq_pd_test.m" 
+       data-start-match=""
+       data-end-match="">
+  </div>
+
+  <pre id="l1eq_pd-1"></pre>
+
+</div>

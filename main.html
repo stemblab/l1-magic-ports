@@ -5,7 +5,10 @@
   [http://users.ece.gatech.edu/~justin/l1magic/,
   $\ell_1-\mathrm{MAGIC}$] is a suite of Matlab software for "solving
   the convex optimization programs central to compressive
-  sampling". Here we consider ports to other languages.
+  sampling". In this repo we consider its execution in other
+  languages.
+
+  <h3>Octave</h3>
 
   Presently only a stand-in for Matlab's linsolve.m function is
   provided to allow l1eq_pd.m to run in Octave.
@@ -22,11 +25,12 @@
   $$
 
   Obviously we can't invert $A$, but if $x$ is known to be 1-sparse,
-  then $x=[0~0~1]^T$ is a [/?id=b007z,unique solution]. In octave:
+  then $x=[0~0~1]^T$ is a unique solution. After downloading the repo
+  you can run the following code locally (from the /m directory.)
 
   <div data-file="./m/l1eq_pd_test.m" 
-       data-start-match=""
-       data-end-match="">
+       data-start-match="\% Solve"
+       data-end-match="x \=">
   </div>
 
   <pre id="l1eq_pd-1"></pre>
